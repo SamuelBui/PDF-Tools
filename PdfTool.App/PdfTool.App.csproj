@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <PlatformTarget>x64</PlatformTarget>
+    <ApplicationIcon>Assets\PdfTools.ico</ApplicationIcon>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <Version>1.0.2</Version>
+    <AssemblyVersion>1.0.2.0</AssemblyVersion>
+    <FileVersion>1.0.2.0</FileVersion>
+    <InformationalVersion>1.0.2</InformationalVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="PDFsharp" Version="6.2.4" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.0" />
+    <PackageReference Include="ClosedXML" Version="0.104.0" />
+    <PackageReference Include="PDFium.Windows" Version="1.0.0" />
+    <PackageReference Include="PDFiumSharp" Version="1.4660.0-alpha1" />
+    <PackageReference Include="PDFiumSharp.Wpf" Version="1.4660.0-alpha1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.WindowsDesktop.App.WindowsForms" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\PdfTools.ico" />
+  </ItemGroup>
+
+  <Target Name="PreparePdfiumNativeDll" AfterTargets="Build;Publish">
+    <Copy SourceFiles="$(TargetDir)pdfium_x64.dll"
+          DestinationFiles="$(TargetDir)pdfium.dll"
+          SkipUnchangedFiles="true"
+          Condition="Exists('$(TargetDir)pdfium_x64.dll')" />
+    <Copy SourceFiles="$(PublishDir)pdfium_x64.dll"
+          DestinationFiles="$(PublishDir)pdfium.dll"
+          SkipUnchangedFiles="true"
+          Condition="'$(PublishDir)' != '' and Exists('$(PublishDir)pdfium_x64.dll')" />
+  </Target>
+</Project>

@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="PdfTool.App/PdfTool.App.csproj" />
+  <Project Path="PdfToolSmoke/PdfToolSmoke.csproj" />
+</Solution>

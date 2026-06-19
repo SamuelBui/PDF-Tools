@@ -1,0 +1,44 @@
+# Build output
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+publish/
+artifacts/
+
+# IDE and user state
+.vs/
+.vscode/
+.idea/
+.git-PdfTool.App-backup/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Local runtime and package caches
+.tmp/
+.appdata/
+.dotnet/
+.nuget/
+.userprofile/
+PdfiumTemp/
+
+# Logs
+*.log
+PdfToolSmoke/PdfTool.App/
+
+# Signing and private key material
+*.pfx
+*.p12
+*.snk
+*.key
+*.pem
+*.cer
+
+# Generated smoke/regression artifacts
+PdfToolSmoke/RegressionCorpus/
+PdfTool.App/SmokeTests/
+
+# Keep reproducible package locks
+!PdfTool.App/packages.lock.json
