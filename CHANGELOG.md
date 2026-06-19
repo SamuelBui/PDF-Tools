@@ -15,6 +15,7 @@ This project uses a simple semantic versioning style:
 ### Added
 - Added a root `PdfTools.slnx` solution for opening the app and smoke harness together.
 - Rewrote the root README as complete product documentation.
+- Added MIT license metadata from the GitHub repository.
 
 ### Changed
 - Replaced personal contact/publisher defaults with repository-oriented support and configurable packaging metadata.

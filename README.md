@@ -158,4 +158,4 @@ Passwords should be treated as sensitive data. The app is designed to avoid pers
 
 ## License
 
-No open-source license has been published yet. Until a `LICENSE` file is added, the source code is shared for review only and all rights are reserved by the project owner.
+PDF Tools is released under the MIT License. See `LICENSE` for details.

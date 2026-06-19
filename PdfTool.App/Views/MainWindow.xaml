@@ -2525,7 +2525,7 @@
                                     <TextBlock Margin="0,6,0,0"
                                                Foreground="#FF475467"
                                                TextWrapping="Wrap"
-                                               Text="PDF Tool is provided free of charge. You may use it without prior permission for personal, educational, or internal work, but you may not sell, license for profit, redistribute commercially, or otherwise commercialize this software in any form." />
+                                               Text="PDF Tool is released under the MIT License. You may use, copy, modify, and distribute it under the terms of that license." />
                                     <TextBlock Margin="0,12,0,0"
                                                Foreground="#FF475467"
                                                TextWrapping="Wrap"
